@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Application</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Landing Page -->
+  <div id="landing-page" class="landing-page">
+    <h1>Welcome to the Quiz Application</h1>
+    <button id="start-button" class="start-btn">Start Quiz</button>
+  </div>
+
+  <!-- Quiz Page -->
+  <div id="quiz-page" class="quiz-page" style="display: none;">
+    <div class="question-container">
+      <h2>Question <span id="question-number"></span> of <span id="total-questions"></span></h2>
+      <p id="question-text"></p>
+    </div>
+    <div id="answers" class="answers-container"></div>
+    <div class="timer">
+      <span id="timer">Time Left: 20s</span>
+    </div>
+    <button id="next-button" class="next-btn" style="display: none;" onclick="nextQuestion()">Next Question</button>
+  </div>
+
+  <!-- Results Page -->
+  <div id="results-page" class="results-page" style="display: none;">
+    <h1>Quiz Completed!</h1>
+    <p>Your score: <span id="score"></span></p>
+    <p id="celebration-message"></p>
+    <div id="answers-display"></div>
+    <button id="restart-button" class="restart-btn">Restart Quiz</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
